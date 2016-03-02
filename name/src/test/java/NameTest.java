@@ -19,6 +19,19 @@ import java.util.Date;
  * Created by mayz985 on 9/1/15.
  */
 public class NameTest {
+
+    @Test
+    public void testPrivate(final @Mocked Car car)  {
+
+        new NonStrictExpectations() {
+            {
+                car.nickName(anyString, anyString);
+            }
+        };
+        Name name = new Name();
+        name.getCar();
+
+    }
     @Test
     public void testWholeName() {
         String wholeName = (new Name()).wholeName("may", "zhang");

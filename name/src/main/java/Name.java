@@ -6,6 +6,9 @@ import java.util.Date;
  */
 
 public class Name {
+
+    private Car myCar = new Car();
+
     static{
         System.out.println("I am in initialization block.");
     }
@@ -25,7 +28,12 @@ public class Name {
 
     private String getBirthDate() {
         System.out.println("private method is invoked....");
+
         return "privateBirthDate";
+    }
+
+    public Car getCar() {
+        return myCar;
     }
 
 
