@@ -1,0 +1,15 @@
+#!/bin/sh
+echo "Hi, Pre-commit hook is invoked"
+
+mvn clean install test
+RESULTS=$?
+if [ $RESULTS -ne 0]; then
+    echo Error: Commit criteria not met with one of more of the following issues,
+    echo 1. Failures in unit tests
+    echo 2. Failure to meet 85% code coverage
+    echo 3. Failure to meet low FindBugs threshold
+    echo 4. Failure to meet 0 Checkstyle errors
+    exit 1
+fi
+
+exit 0
