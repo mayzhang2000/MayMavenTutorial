@@ -25,11 +25,11 @@ public class NameTest {
 
         new NonStrictExpectations() {
             {
-                car.nickName(anyString, anyString);
+                car.wholeName(anyString, anyString);
             }
         };
         Name name = new Name();
-        name.getCar();
+        name.processTime();
 
     }
     @Test
@@ -154,7 +154,7 @@ public class NameTest {
         Assert.assertEquals(mockedResult, output);
     }
 
-    @Test
+    //@Test
     public void testMockConstructor() {
         new MockUp<Name>() {
             //Don't forget to use @Mock
@@ -165,7 +165,7 @@ public class NameTest {
         System.out.println(myName.processTime());
     }
 
-    @Test
+    //@Test
     public void testMockConstructorWithParams() {
         new MockUp<Name>() {
             //Don't forget to use @Mock

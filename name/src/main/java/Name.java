@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -6,6 +7,9 @@ import java.util.Date;
  */
 
 public class Name {
+
+
+    public Calendar calendar;
 
     private Car myCar = new Car();
 
@@ -22,11 +26,13 @@ public class Name {
     }
 
     public String processTime() {
+        myCar.wholeName("first", "last");
         Date myDate = new Date();
         return myDate.toString();
     }
 
     private String getBirthDate() {
+
         System.out.println("private method is invoked....");
 
         return "privateBirthDate";
