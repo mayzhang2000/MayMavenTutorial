@@ -3,10 +3,10 @@ package Pattern.DecoratorPattern;
 /**
  * Created by mayz985 on 9/9/16.
  */
-public class ShapeDecorator implements ShapeInterface {
-    ShapeInterface realShape;
+public class ShapeDecorator implements Shape {
+    Shape realShape;
 
-    ShapeDecorator(ShapeInterface realShpae) {
+    ShapeDecorator(Shape realShpae) {
         this.realShape = realShpae;
     }
 

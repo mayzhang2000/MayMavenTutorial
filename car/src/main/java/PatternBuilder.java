@@ -4,7 +4,7 @@
 
 
 
-public class PatternBuilder {
+public class PatternBuilder{
     String name;
 
     private PatternBuilder(String name) {
@@ -31,6 +31,8 @@ public class PatternBuilder {
 
     public static void main(String[] args) {
         new PatternBuilder.CarWithBuilderDemoBuilder().withName("lexus").build().printName();
+
+
     }
 
 }
